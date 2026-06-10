@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, ScrollView } from "react-native";
 import { useLocalSearchParams } from "expo-router";
 
 
@@ -6,7 +6,7 @@ export default function PrepareScreen() {
   const { username } = useLocalSearchParams();
 
   return (
-    <View style={styles.container}>
+    <ScrollView contentContainerStyle={styles.container}>
       <Text style={styles.title}>Be prepared!</Text>
 
       <View style={styles.section}>
@@ -45,7 +45,7 @@ export default function PrepareScreen() {
         </View>
       
       
-    </View>
+    </ScrollView>
   );
 }
 

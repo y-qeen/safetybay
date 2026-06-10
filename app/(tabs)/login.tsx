@@ -6,6 +6,7 @@ import {
   TextInput,
   TouchableOpacity,
   View,
+  ScrollView,
 } from "react-native";
 
 export default function LoginScreen() {
@@ -14,7 +15,7 @@ export default function LoginScreen() {
   const router = useRouter();
 
   return (
-    <View style={styles.container}>
+    <ScrollView contentContainerStyle={styles.container}>
       <Text style={styles.title}>SafetyBay</Text>
       <TextInput
         style={styles.input}
@@ -42,7 +43,7 @@ export default function LoginScreen() {
         <Text style={styles.buttonText}>Login</Text>
       </TouchableOpacity>
       <Text style={styles.signup}>Don't have an account? Sign up</Text>
-    </View>
+    </ScrollView>
   );
 }
 

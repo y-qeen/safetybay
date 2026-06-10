@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View, ScrollView } from "react-native";
 
 const options = ["Earthquake", "Flood", "Wildfire", "Hurricane", "Heatwaves"];
 
@@ -37,7 +37,7 @@ export default function RecoveryScreen() {
   };
 
   return (
-    <View style={styles.container}>
+    <ScrollView contentContainerStyle={styles.container}>
       <Text
         style={{
           fontSize: 32,
@@ -136,7 +136,7 @@ export default function RecoveryScreen() {
           ))}
         </View>
       )}
-    </View>
+    </ScrollView>
   );
 }
 const styles = StyleSheet.create({
