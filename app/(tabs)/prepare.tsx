@@ -1,18 +1,37 @@
-import { Text, View, StyleSheet } from 'react-native';
+import { StyleSheet, Text, View } from "react-native";
 
 export default function PrepareScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Prepare</Text>
+      <Text style={styles.title}>Be prepared!</Text>
 
       <View style={styles.section}>
-        <Text style={styles.subtitle}>Before an Emergency</Text>
+        <Text style={styles.subtitle}>About Natural Disasters</Text>
         <Text style={styles.paragraphText}>
-          [Placeholder text about emergency preparedness...]
+          Natural disasters are natural occuring events that often cause
+          significant damage to communities and our environment. Through
+          improved research, scientists have found ways to predict the falls of
+          these events. Though it is important to remember that they are still
+          greatly unpredictable, meaning we should always be prepared for a
+          heatwave or typhoon!
+        </Text>
+        <Text style={styles.paragraphText}>
+          It's important to prepare an Emergency Disaster Kit! Here's what you should have:
         </Text>
       </View>
-
-      {/* Rest of your list... */}
+      <View style = {styles.list}>
+        <Text>• Flashlight</Text>
+        <Text>• First Aid Kit</Text>
+        <Text>• Water</Text>
+        <Text>• Medicine and Hygiene items</Text>
+        <Text>• Non-perishable food</Text>
+        <Text>• Rechargable battery packs</Text>
+        <Text>• Cash</Text>
+        <Text>• Multi-tool wrench</Text>
+        <Text>• Important Documents</Text>
+        <Text>• Clothing and blankets</Text>
+      </View>
+      
     </View>
   );
 }
@@ -24,19 +43,20 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 32,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   subtitle: {
     fontSize: 20,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   paragraphText: {
     lineHeight: 24,
     marginTop: 8,
   },
-  section:{
+  section: {
     padding: 1,
   },
-
+  list:{
+    flex: 1,
   }
-);
+});
