@@ -11,7 +11,7 @@ export default function LoginScreen() {
       <TextInput
         style ={styles.input}
         placeholder = "Email"
-        placeholderTextColor= {""}
+        placeholderTextColor= {"#114b5f"}
         value = {email}
         onChangeText = {setEmail}
 
@@ -19,7 +19,7 @@ export default function LoginScreen() {
       <TextInput
         style ={styles.input}
         placeholder = "Password"
-        placeholderTextColor= {""}
+        placeholderTextColor= {"#114b5f"}
         value = {password}
         onChangeText = {setPassword}
 
@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
 
   },
   buttonText:{
-    color: "",
+    color: "#114b5f",
     fontWeight: 600,
     fontSize: 18,
     textAlign: "center",
