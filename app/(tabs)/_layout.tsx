@@ -57,7 +57,7 @@ export default function TabLayout() {
           tabBarIcon: ({ color }) => (
             <IconSymbol
               size={28}
-              name="exclamationmark.circle.fill"
+              name="paperplane.circle.fill"
               color={color}
             />
           ),

@@ -34,7 +34,7 @@ export default function LoginScreen() {
         style={styles.login}
         onPress={() =>
           router.replace({
-            pathname: "/prepare",
+            pathname: "/(tabs)/prepare",
             params: { username: email },
           })
         }
