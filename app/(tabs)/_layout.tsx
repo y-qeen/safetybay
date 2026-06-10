@@ -51,7 +51,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="recovery"
         options={{
-          title: "Recovery Guide",
+          title: "Recovery",
           tabBarIcon: ({ color }) => (
             <IconSymbol
               size={28}
