@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert} from "react-native";
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert, ScrollView} from "react-native";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../firebaseConfig";
 import { useLocalSearchParams } from "expo-router";
@@ -50,7 +50,7 @@ export default function RespondScreen() {
 
     return(
         
-        <View style={styles.container}>
+        <ScrollView contentContainerStyle={styles.container}>
             <Text style={styles.title}>Stay Notified!</Text>
                 <View style={styles.profileCard}>
                     <Text style={styles.usernameText}>
@@ -89,7 +89,7 @@ export default function RespondScreen() {
                     onPress={() => sendStatus("Safe but Alert")}
 
                 >
-                    <Text style = {styles.buttonText}>Safe but Cautious</Text>
+                    <Text style = {styles.buttonText}>Safe but Alert</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                     style= {[styles.button, styles.safe]}
@@ -108,7 +108,7 @@ export default function RespondScreen() {
                 <Text>{person.status}</Text>
             </View>
 ))}
-        </View>
+        </ScrollView>
 
     );
 }
@@ -152,7 +152,7 @@ friendCard:{
     justifyContent: "space-between"
 },
 container: {
-    flex: 1,
+    
     padding: 20,
     backgroundColor: "#9BC1BC",
 },
