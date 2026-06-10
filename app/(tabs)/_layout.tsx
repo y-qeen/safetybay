@@ -16,12 +16,6 @@ export default function TabLayout() {
         headerShown: false,
         tabBarButton: HapticTab,
       }}>
-      <Tabs.Screen
-        name="awareness"
-        options={{
-        title: 'Awareness',
-        tabBarIcon: ({ color }) => <IconSymbol size={28} name="shield.fill" color={color} />,
-      }}/>
     <Tabs.Screen
       name="login"
       options={{
@@ -29,6 +23,12 @@ export default function TabLayout() {
       tabBarIcon: ({ color }) => <IconSymbol size={28} name="person.fill" color={color} />,
       }}
     />
+    <Tabs.Screen
+        name="awareness"
+        options={{
+        title: 'Awareness',
+        tabBarIcon: ({ color }) => <IconSymbol size={28} name="shield.fill" color={color} />,
+      }}/>
     <Tabs.Screen
       name="prepare"
       options={{
