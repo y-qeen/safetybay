@@ -1,9 +1,12 @@
 import { View, Text, TextInput, StyleSheet, TouchableOpacity} from "react-native";
-import {useState} from "react"
+import {useState} from "react";
+import {useRouter} from "expo-router";
+import { IconSymbol } from "@/components/ui/icon-symbol";
 
 export default function LoginScreen() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const router = useRouter();
 
   return (
     <View style ={styles.container}>
@@ -26,7 +29,12 @@ export default function LoginScreen() {
       />
       <TouchableOpacity
         style ={styles.login}
-        onPress ={() => console.log("Login Pressed")}
+        onPress={() =>
+          router.replace({
+            pathname: "/prepare",
+            params: { username: email },
+        })
+        }
       >
         <Text style = {styles.buttonText}>Login</Text>
       </TouchableOpacity>

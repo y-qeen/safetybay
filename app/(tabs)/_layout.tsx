@@ -27,6 +27,19 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
+        name="prepare"
+        options={{
+          title: "Preparation",
+          tabBarIcon: ({ color }) => (
+            <IconSymbol
+              size={28}
+              name="exclamationmark.circle.fill"
+              color={color}
+            />
+          ),
+        }}
+      />
+      <Tabs.Screen
         name="respond"
         options={{
           title: "Assistance",
@@ -36,9 +49,9 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="prepare"
+        name="recovery"
         options={{
-          title: "Preparation",
+          title: "Recovery Guide",
           tabBarIcon: ({ color }) => (
             <IconSymbol
               size={28}
